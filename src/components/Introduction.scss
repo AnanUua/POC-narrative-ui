@@ -1,0 +1,40 @@
+.Introduction {
+  &__date {
+    color: grey;
+  }
+
+  &__baseline {
+    margin-top: 2rem;
+  }
+
+  &__item {
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid gray;
+  }
+
+  &__options {
+    margin-top: 2rem;
+  }
+
+  &__option {
+    color: orange;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 2rem;
+
+    &:hover {
+      color: rgb(213, 139, 0);
+    }
+  }
+
+  &__nextButton {
+    display: block;
+    text-decoration: underline;
+    margin-top: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

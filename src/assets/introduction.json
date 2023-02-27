@@ -1,0 +1,77 @@
+[
+  {
+    "date": "05.10.97",
+    "baseline": [
+      "La portière se referme dans un claquement sec. La clé est déjà sur le contact, faisant tressauter la voiture d’impatience. Tes mains agrippent le cuir brûlant que revêt le volant. L’irrésistible voyant orangé du tableau de bord attire ton regard : l’aiguille indique que le réservoir est plein.",
+      "\nAvant d’appuyer sur l’accélérateur, une pensée s’immisce dans ton subconscient : pourquoi est-ce que tu fais tout ça ?"
+    ],
+    "options": [
+      {
+        "label": "Tu souhaites t’échapper de ton quotidien.",
+        "following": [
+          "Cette routine absurde dans laquelle le reste du monde semble se complaire te paraît insupportable. Les objectifs trimestriels ; le tapage usuel de la machine à café ; les rangées de bureau réparties sur la hauteur d’un gratte-ciel. Ton corps et ton esprit te demandent *d’arrêter ça*."
+        ]
+      },
+      {
+        "label": "Tu veux renouer avec tes origines.",
+        "following": [
+          "La ville a eu beau t’offrir tout ce qu’elle pouvait, l’idée de revenir chez toi a comme quelque chose de rassurant. Retrouver le soleil sous lequel tu es né et tu as grandi. Tout ce que tu as laissé derrière toi, le jour où tu es parti. La lettre d’amour à ton pays va s’écrire *ici et maintenant*."
+        ]
+      }
+    ]
+  },
+  {
+    "date": "06.10.97",
+    "baseline": [
+      "Les quatre roues de ton Land Rover Defender parcourent l’asphalte depuis plus d’une journée maintenant. Et ce n’est que le début. Comme à chaque long trajet, tu as tout le temps du monde pour *cogiter*."
+    ],
+    "options": [
+      {
+        "label": "Tu appréhendes le voyage.",
+        "following": [
+          "Les yeux vissés tantôt aux bandes de la circulation, tantôt au compteur kilométrique, l’anxiété se met à confluer dans chaque région de ton corps. Ce voyage n’est-il pas un peu précipité ? Comment peux-tu être certain de trouver ce que tu cherches ?",
+          "\nEt puis… s’il t’arrivait quelque chose, à *qui* manquerais-tu ?"
+        ]
+      },
+      {
+        "label": "Tu as hâte d’arriver à destination.",
+        "following": "Tu sens tes synapses libérer des cascades de sérotonine qui se déversent à travers tout ton système neuronal. L’appel du voyage a exactement ce *pouvoir-là*. Tout porte à croire que c’est la meilleure journée de tous les temps."
+      }
+    ]
+  },
+
+  {
+    "date": "11.10.97",
+    "baseline": [
+      "Tu roules depuis six jours. Ton voyage a commencé à Marrakech, au Maroc. Tu as longé la mer pour atteindre Nouakchott, puis Saint-Louis, avant de finalement t’enfoncer dans les terres en direction du Mali."
+    ],
+    "options": [
+      {
+        "label": "Tu t’émerveilles devant la Réserve du Ferlo Nord.",
+        "following": [
+          "Des hectares de pâturages s’étirent à l’horizon, parsemés de quelques arbres timides et recouverts d’une couche d’herbe jaunie et sèche. Alors que tu roules, tu crois apercevoir des gazelles. C’est peut-être ton *imagination*."
+        ]
+      },
+      {
+        "label": "Tu fais un détour par Richard Toll, au nord-ouest.",
+        "following": "Tu passes la nuit dans un petit hôtel de fortune au bord de la ville, cernée par des champs de canne à sucre et des rizières. Saint-Louis est à 100 km derrière toi. 374 pour Dakar. Demain matin, ces nombres vont continuer d’augmenter."
+      }
+    ]
+  },
+
+  {
+    "date": "21.10.97",
+    "baseline": [
+      "Sénégal, Mali, Guinée, Côte d’Ivoire. Tes yeux enregistrent des successions d’images ; tes narines interprètent quantité d’effluves. Et le temps continue de s’écouler inexorablement, comme il le fait à chaque fois.",
+      "\nIl te reste un pays à traverser."
+    ],
+    "options": [
+      {
+        "label": "Tu entames la dernière étape du road trip.",
+        "following": [
+          "Tu détailles un panneau jaune et usé, sur lequel des caractères noirs s’alignent et disent “Nyalaandé”. Tu es arrivé."
+        ]
+      }
+    ]
+  }
+]

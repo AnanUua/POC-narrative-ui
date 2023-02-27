@@ -1,0 +1,3 @@
+- Code split le dossier components/
+- Définir la longueur du tableau de datas dans introductions.json (et s'en servir dans le store et dans les components)
+- Revoir le système de "score" pour déterminer la version du scénario

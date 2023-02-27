@@ -1,0 +1,11 @@
+.StartButton {
+  background-color: orange;
+  color: black;
+  padding: 2rem;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: rgb(213, 139, 0);
+    cursor: pointer;
+  }
+}
