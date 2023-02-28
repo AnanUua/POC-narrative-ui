@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const TIPPING_POINT = 4 // Get introduction prompts length
+const TIPPING_POINT = 4 // TODO: Get introduction prompts length
 
 const initialState = {
   currentIndex: 0,
@@ -21,7 +21,7 @@ export const introduction = createSlice({
     completePrompts: (state) => {
       state.isPromptComplete = true
 
-      if (state.score < TIPPING_POINT) {
+      if (state.score >= TIPPING_POINT) {
         state.version = 'Haine'
       } else {
         state.version = 'Nostalgie'
