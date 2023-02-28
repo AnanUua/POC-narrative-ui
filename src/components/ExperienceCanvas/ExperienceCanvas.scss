@@ -1,0 +1,41 @@
+.ExperienceCanvas {
+  #webgl {
+    width: 10rem;
+    height: 10rem;
+    border: 0.1rem solid white;
+    position: relative;
+    margin-top: 2rem;
+  }
+
+  button {
+    border: 0.1rem solid white;
+    padding: 1rem;
+    cursor: pointer;
+    margin-right: 2rem;
+
+    &.more {
+      margin-top: 2rem;
+    }
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: 0.05rem solid white;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .dialogue {
+    margin-top: 2rem;
+
+    .narrator {
+      text-transform: uppercase;
+
+      &--innerVoice {
+        color: rgb(185, 88, 255);
+      }
+    }
+  }
+}
