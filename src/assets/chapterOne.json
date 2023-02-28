@@ -1,0 +1,97 @@
+[
+  {
+    "name": "Cercles mégalithiques",
+    "voiceover": [
+      {
+        "text": "...",
+        "emitter": "narrator"
+      }
+    ],
+    "spots": [
+      {
+        "index": 0,
+        "label": "Cercles de pierre",
+        "voiceover": [
+          {
+            "text": "Une colonie de mégalithes a choisi de s’établir ici, sur un site grand de plusieurs hectares. Des centaines de piliers de latérite taillée forment des cercles et se regardent les uns les autres. Ils attendant probablement la fin du monde.",
+            "emitter": "narrator"
+          },
+          {
+            "text": "Ces pierres n’ont rien de réjouissant : elles surmontent des sépultures. Laisse-moi reformuler : tu te trouves dans un cimetière, et sous tes pieds reposent des centaines — peut-être même des *milliers* — d’habitants du Nyalandée. Ils ne sont plus là, aujourd’hui.",
+            "emitter": "innerVoice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ancienne mine de phosphate",
+    "voiceover": [
+      {
+        "text": "...",
+        "emitter": "narrator"
+      }
+    ],
+    "spots": [
+      {
+        "index": 0,
+        "label": "Outils laissés à l’abandon",
+        "voiceover": [
+          {
+            "text": "Quelques outils jonchent le sol aride et poussiéreux, le long du chemin menant à la mine. À les détailler, ils n’ont pas été utilisés depuis plusieurs années. La vacuité de ces lieux, autrefois actifs, évoque désormais quelque chose d’à la fois triste et apaisant.",
+            "emitter": "narrator"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "label": "Entrée de la mine",
+        "voiceover": [
+          {
+            "text": "Tu es accueilli par les restes d’un triste portail rouillé que le vent fait cliqueter par cycles, et sur lequel tu réussis à lire “GAÏA MINING COMPANY”. Les murs, criblés de fissures et de crevasses, ont été taillés à même la colline. La pourriture est en train de lentement étioler le bois des poutres qui soutiennent les tunnels. Des morceaux de rails témoignent des innombrables allées et venues des mineurs.",
+            "emitter": "narrator"
+          },
+          {
+            "text": "Tu sens le vent s’engouffrer à l’intérieur.",
+            "emitter": "narrator"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Point de vue",
+    "voiceover": [
+      {
+        "text": "Le soleil trône au-dessus de toi, dans un ciel bleu moucheté de résidus opalins. Loin à l’ouest, tu détailles une mine surplombée d’un large panneau rouillant cliquetant au gré du vent. À l’est, des centaines de pierre se réunissent pour former des cercles. Au sud-ouest, les contours brouillés d’un village se dessinent dans l’air brûlant du désert.",
+        "emitter": "narrator"
+      },
+      {
+        "text": "Keur Gnìalo n’attend plus que toi. Appuie sur l’accélérateur. Démarre *maintenant*, sans plus tarder.",
+        "emitter": "innerVoice"
+      }
+    ],
+    "spots": [
+      {
+        "index": 0,
+        "label": "...",
+        "voiceover": [
+          {
+            "text": "...",
+            "emitter": "narrator"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "label": "...",
+        "voiceover": [
+          {
+            "text": "...",
+            "emitter": "narrator"
+          }
+        ]
+      }
+    ]
+  }
+]
