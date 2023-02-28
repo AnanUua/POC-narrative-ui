@@ -3,6 +3,7 @@ import chapterOne from '../../assets/chapterOne.json'
 import { useState } from 'react'
 
 export default function ExperienceCanvas() {
+  // Local state
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0)
   const [displayUi, setDisplayUi] = useState(false)
   const [currentSpotIndex, setCurrentSpotIndex] = useState(0)
@@ -13,24 +14,28 @@ export default function ExperienceCanvas() {
   const voiceover = currentSpot.voiceover
   const hasMore = currentTextIndex < voiceover.length - 1
 
-  function changeScene(sceneIndex) {
+  // Change the current scene and reset UI state
+  const changeScene = (sceneIndex) => {
     setCurrentSceneIndex(sceneIndex)
     resetUiState()
   }
 
-  function goToSpot(spotIndex) {
+  // Change the current spot and reset UI state
+  const goToSpot = (spotIndex) => {
     setCurrentSpotIndex(spotIndex)
     setCurrentSpeaker(voiceover[0].emitter)
     setCurrentTextIndex(0)
     setDisplayUi(true)
   }
 
-  function showMore() {
+  // Show the next text in the voiceover array
+  const showMore = () => {
     setCurrentTextIndex(currentTextIndex + 1)
     setCurrentSpeaker(voiceover[currentTextIndex + 1].emitter)
   }
 
-  function resetUiState() {
+  // Reset UI state
+  const resetUiState = () => {
     setDisplayUi(false)
     setCurrentSpotIndex(0)
     setCurrentTextIndex(0)
@@ -42,15 +47,6 @@ export default function ExperienceCanvas() {
         <h2>CHOISIR UNE SCÈNE:&nbsp;</h2>
         <button onClick={() => changeScene(0)}>Cercles mégalithiques</button>
         <button onClick={() => changeScene(1)}>Ancienne mine de phosphate</button>
-      </div>
-      <hr />
-      <div>
-        <p>Current scene index: {currentSceneIndex}</p>
-        <p>Current spot index: {currentSpotIndex}</p>
-        <p>Current text index: {currentTextIndex}</p>
-        <p>Current speaker: {currentSpeaker}</p>
-        <p>Has more: {hasMore.toString()}</p>
-        <p>Display UI: {displayUi.toString()}</p>
       </div>
       <hr />
       {currentSceneIndex === 0 && (
