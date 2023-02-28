@@ -12,7 +12,7 @@ export default function Introduction() {
   const introduction = introductionData
 
   // Redux selectors
-  const { currentIndex, isPromptComplete, version, hasExperienceStarted } = useSelector(
+  const { currentIndex, isPromptComplete, scenario, hasExperienceStarted } = useSelector(
     (state) => state.introduction
   )
 
@@ -22,8 +22,7 @@ export default function Introduction() {
 
   // Check if user has completed enough prompts to start the experience
   useEffect(() => {
-    if (currentIndex > 3) {
-      // TODO: get prompt count from JSON file
+    if (currentIndex > Object.keys(introductionData).length - 1) {
       dispatch(completePrompts())
     }
   }, [currentIndex])
@@ -35,9 +34,9 @@ export default function Introduction() {
   }
 
   // Hide the following text for a prompt, update local state, and record user's answer
-  const hideFollowingText = (index) => {
+  const hideFollowingText = (data) => {
     setShowFollowing(false)
-    dispatch(answerPrompt(index))
+    dispatch(answerPrompt(data))
   }
 
   // Render introduction prompts and following text
@@ -58,7 +57,10 @@ export default function Introduction() {
       const followingText = showFollowing && (
         <p className="Introduction__baseline">
           {section.options[followingToShow].following}
-          <button className="Introduction__nextButton" onClick={() => hideFollowingText(index)}>
+          <button
+            className="Introduction__nextButton"
+            onClick={() => hideFollowingText(section.options[followingToShow]?.version)}
+          >
             (Suite)
           </button>
         </p>
@@ -80,7 +82,7 @@ export default function Introduction() {
     return (
       <footer>
         <p style={{ marginTop: '2rem' }}>
-          Vous êtes prêt(e) à partir. Motivation de départ: {version}.
+          Vous êtes prêt(e) à partir. Motivation de départ: {scenario}.
         </p>
         <StartButton />
       </footer>

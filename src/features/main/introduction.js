@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit'
+import introductionData from '../../assets/introduction.json'
 
-const TIPPING_POINT = 4 // TODO: Get introduction prompts length
+const TIPPING_POINT = Object.keys(introductionData).length
 
 const initialState = {
   currentIndex: 0,
   score: 0,
-  version: '',
+  scenario: '',
   isPromptComplete: false,
   hasExperienceStarted: false,
 }
@@ -21,10 +22,10 @@ export const introduction = createSlice({
     completePrompts: (state) => {
       state.isPromptComplete = true
 
-      if (state.score >= TIPPING_POINT) {
-        state.version = 'Haine'
+      if (state.score <= TIPPING_POINT) {
+        state.scenario = 'Haine'
       } else {
-        state.version = 'Nostalgie'
+        state.scenario = 'Nostalgie'
       }
     },
     startExperience: (state) => {
@@ -33,7 +34,6 @@ export const introduction = createSlice({
   },
 })
 
-export const { answerPrompt, completePrompts, startExperience } =
-  introduction.actions
+export const { answerPrompt, completePrompts, startExperience } = introduction.actions
 
 export default introduction.reducer

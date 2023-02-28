@@ -1,5 +1,5 @@
 import './ExperienceCanvas.scss'
-import chapterOne from '../../assets/chapterOne.json'
+import chapterOneData from '../../assets/chapterOne.json'
 import { useState } from 'react'
 
 export default function ExperienceCanvas() {
@@ -10,7 +10,7 @@ export default function ExperienceCanvas() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [currentSpeaker, setCurrentSpeaker] = useState('')
 
-  const currentSpot = chapterOne[currentSceneIndex].spots[currentSpotIndex]
+  const currentSpot = chapterOneData[currentSceneIndex].spots[currentSpotIndex]
   const voiceover = currentSpot.voiceover
   const hasMore = currentTextIndex < voiceover.length - 1
 
