@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'
-import { startExperience } from '../features/main/introduction'
+import { startExperience } from '../../features/main/introduction'
 import './StartButton.scss'
 
 export default function StartButton() {

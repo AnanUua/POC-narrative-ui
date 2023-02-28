@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { answerPrompt, completePrompts } from '../features/main/introduction'
-import introduction from '../assets/introduction.json'
+import { answerPrompt, completePrompts } from '../../features/main/introduction'
+import introduction from '../../assets/introduction.json'
 import './Introduction.scss'
-import StoreData from './StoreData'
-import StartButton from './StartButton'
-import ExperienceCanvas from './ExperienceCanvas'
+import StartButton from '../StartButton/StartButton'
 
 export default function Introduction() {
   // Getters and dispatch
@@ -88,8 +86,6 @@ export default function Introduction() {
           )}
         </section>
       )}
-      {hasExperienceStarted && <ExperienceCanvas />}
-      <StoreData />
     </>
   )
 }
