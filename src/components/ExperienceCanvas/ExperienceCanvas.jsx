@@ -1,6 +1,6 @@
 import './ExperienceCanvas.scss'
 import chapterOneData from '../../assets/chapterOne.json'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function ExperienceCanvas() {
   // Local state
@@ -49,23 +49,24 @@ export default function ExperienceCanvas() {
         <button onClick={() => changeScene(1)}>Ancienne mine de phosphate</button>
       </div>
       <hr />
-      {sceneIndex === 0 && (
-        <div className="cercles">
+      <div>
+        <h2>CHOISIR UN SPOT:&nbsp;</h2>
+        {sceneIndex === 0 && (
           <button className="spot" onClick={() => goToSpot(0)}>
             Cercles de pierre
           </button>
-        </div>
-      )}
-      {sceneIndex === 1 && (
-        <div className="mine">
-          <button className="spot" onClick={() => goToSpot(0)}>
-            Outils abandonnés
-          </button>
-          <button className="spot spot--2" onClick={() => goToSpot(1)}>
-            Entrée de la mine
-          </button>
-        </div>
-      )}
+        )}
+        {sceneIndex === 1 && (
+          <>
+            <button className="spot" onClick={() => goToSpot(0)}>
+              Outils abandonnés
+            </button>
+            <button className="spot spot--2" onClick={() => goToSpot(1)}>
+              Entrée de la mine
+            </button>
+          </>
+        )}
+      </div>
       <canvas id="webgl"></canvas>
       {displayUi && (
         <div className="dialogue">
