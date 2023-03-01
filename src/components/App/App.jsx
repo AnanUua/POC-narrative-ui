@@ -13,8 +13,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <Introduction />
-      {hasExperienceStarted && <ExperienceCanvas />}
+      {/* <Introduction /> */}
+      {!hasExperienceStarted && <ExperienceCanvas />}
       <StoreData />
     </div>
   )

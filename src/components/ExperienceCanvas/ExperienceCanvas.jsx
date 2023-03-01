@@ -1,18 +1,26 @@
 import './ExperienceCanvas.scss'
 import chapterOneData from '../../assets/chapterOne.json'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ExperienceCanvas() {
   // Local state
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0)
   const [displayUi, setDisplayUi] = useState(false)
-  const [currentSpotIndex, setCurrentSpotIndex] = useState(0)
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [currentSpeaker, setCurrentSpeaker] = useState('')
 
-  const currentSpot = chapterOneData[currentSceneIndex].spots[currentSpotIndex]
-  const voiceover = currentSpot.voiceover
+  const [currentSpot, setCurrentSpot] = useState(chapterOneData[currentSceneIndex])
+  const [voiceover, setVoiceover] = useState(currentSpot.voiceover)
   const hasMore = currentTextIndex < voiceover.length - 1
+
+  const initScene = () => {
+    setDisplayUi(true)
+    setCurrentSpeaker(voiceover[0].emitter)
+  }
+
+  useEffect(() => {
+    initScene()
+  }, [])
 
   // Change the current scene and reset UI state
   const changeScene = (sceneIndex) => {
@@ -22,10 +30,11 @@ export default function ExperienceCanvas() {
 
   // Change the current spot and reset UI state
   const goToSpot = (spotIndex) => {
-    setCurrentSpotIndex(spotIndex)
+    setDisplayUi(true)
+    setCurrentSpot(chapterOneData[currentSceneIndex].spots[spotIndex])
+    setVoiceover(chapterOneData[currentSceneIndex].spots[spotIndex].voiceover)
     setCurrentSpeaker(voiceover[0].emitter)
     setCurrentTextIndex(0)
-    setDisplayUi(true)
   }
 
   // Show the next text in the voiceover array
@@ -37,7 +46,6 @@ export default function ExperienceCanvas() {
   // Reset UI state
   const resetUiState = () => {
     setDisplayUi(false)
-    setCurrentSpotIndex(0)
     setCurrentTextIndex(0)
   }
 
@@ -78,6 +86,11 @@ export default function ExperienceCanvas() {
             {hasMore && (
               <button className="more" onClick={showMore}>
                 Suite
+              </button>
+            )}
+            {!hasMore && (
+              <button className="more" onClick={resetUiState}>
+                Fermer
               </button>
             )}
           </div>
