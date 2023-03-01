@@ -37,8 +37,8 @@ export default function ExperienceCanvas() {
   }
 
   useEffect(() => {
-    console.log(sceneIndex)
-  }, [sceneIndex, spot])
+    console.log(spot)
+  }, [spot])
 
   // Change the current spot and reset UI state
   const goToSpot = (spotIndex) => {
@@ -63,7 +63,6 @@ export default function ExperienceCanvas() {
 
   return (
     <section className="ExperienceCanvas">
-      {sceneIndex}
       <div className="buttons">
         <h2>CHOISIR UNE SCÈNE:&nbsp;</h2>
         <button onClick={() => changeScene(0)}>Cercles mégalithiques</button>
