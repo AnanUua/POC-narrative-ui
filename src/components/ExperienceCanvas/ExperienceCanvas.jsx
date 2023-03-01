@@ -4,49 +4,41 @@ import { useEffect, useState } from 'react'
 
 export default function ExperienceCanvas() {
   // Local state
-  const [currentSceneIndex, setCurrentSceneIndex] = useState(0)
-  const [displayUi, setDisplayUi] = useState(false)
-  const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [currentSpeaker, setCurrentSpeaker] = useState('')
+  const [displayUi, setDisplayUi] = useState(true)
+  const [sceneIndex, setSceneIndex] = useState(0)
+  const [textIndex, setTextIndex] = useState(0)
 
-  const [currentSpot, setCurrentSpot] = useState(chapterOneData[currentSceneIndex])
-  const [voiceover, setVoiceover] = useState(currentSpot.voiceover)
-  const hasMore = currentTextIndex < voiceover.length - 1
+  const [spot, setSpot] = useState(chapterOneData[sceneIndex])
+  const [voiceover, setVoiceover] = useState(spot.voiceover)
+  const [speaker, setSpeaker] = useState(voiceover[0].emitter)
 
-  const initScene = () => {
-    setDisplayUi(true)
-    setCurrentSpeaker(voiceover[0].emitter)
-  }
-
-  useEffect(() => {
-    initScene()
-  }, [])
+  const hasMore = textIndex < voiceover.length - 1
 
   // Change the current scene and reset UI state
   const changeScene = (sceneIndex) => {
-    setCurrentSceneIndex(sceneIndex)
+    setSceneIndex(sceneIndex)
     resetUiState()
   }
 
   // Change the current spot and reset UI state
   const goToSpot = (spotIndex) => {
     setDisplayUi(true)
-    setCurrentSpot(chapterOneData[currentSceneIndex].spots[spotIndex])
-    setVoiceover(chapterOneData[currentSceneIndex].spots[spotIndex].voiceover)
-    setCurrentSpeaker(voiceover[0].emitter)
-    setCurrentTextIndex(0)
+    setSpot(chapterOneData[sceneIndex].spots[spotIndex])
+    setVoiceover(chapterOneData[sceneIndex].spots[spotIndex].voiceover)
+    setSpeaker(voiceover[0].emitter)
+    setTextIndex(0)
   }
 
   // Show the next text in the voiceover array
   const showMore = () => {
-    setCurrentTextIndex(currentTextIndex + 1)
-    setCurrentSpeaker(voiceover[currentTextIndex + 1].emitter)
+    setTextIndex(textIndex + 1)
+    setSpeaker(voiceover[textIndex + 1].emitter)
   }
 
   // Reset UI state
   const resetUiState = () => {
     setDisplayUi(false)
-    setCurrentTextIndex(0)
+    setTextIndex(0)
   }
 
   return (
@@ -57,14 +49,14 @@ export default function ExperienceCanvas() {
         <button onClick={() => changeScene(1)}>Ancienne mine de phosphate</button>
       </div>
       <hr />
-      {currentSceneIndex === 0 && (
+      {sceneIndex === 0 && (
         <div className="cercles">
           <button className="spot" onClick={() => goToSpot(0)}>
             Cercles de pierre
           </button>
         </div>
       )}
-      {currentSceneIndex === 1 && (
+      {sceneIndex === 1 && (
         <div className="mine">
           <button className="spot" onClick={() => goToSpot(0)}>
             Outils abandonnés
@@ -77,12 +69,10 @@ export default function ExperienceCanvas() {
       <canvas id="webgl"></canvas>
       {displayUi && (
         <div className="dialogue">
-          {currentSpeaker === 'narrator' && <h2 className="narrator">Le narrateur</h2>}
-          {currentSpeaker === 'innerVoice' && (
-            <h2 className="narrator narrator--innerVoice">Une voix</h2>
-          )}
+          {speaker === 'narrator' && <h2 className="narrator">Le narrateur</h2>}
+          {speaker === 'innerVoice' && <h2 className="narrator narrator--innerVoice">Une voix</h2>}
           <div>
-            <p>{voiceover[currentTextIndex].text}</p>
+            <p>{voiceover[textIndex].text}</p>
             {hasMore && (
               <button className="more" onClick={showMore}>
                 Suite
