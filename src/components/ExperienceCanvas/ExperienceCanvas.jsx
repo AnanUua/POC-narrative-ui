@@ -1,6 +1,6 @@
 import './ExperienceCanvas.scss'
 import chapterOneData from '../../assets/chapterOne.json'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ExperienceCanvas() {
   // Local state
@@ -14,11 +14,31 @@ export default function ExperienceCanvas() {
 
   const hasMore = textIndex < voiceover.length - 1
 
+  // Init the first scene
+  useEffect(() => {
+    initScene(0)
+    console.log('initial scene init')
+  }, [])
+
+  const initScene = (dataSceneIndex) => {
+    setSceneIndex(dataSceneIndex)
+    setSpot(chapterOneData[sceneIndex])
+    setVoiceover(spot.voiceover)
+    setSpeaker(voiceover[0].emitter)
+    setTextIndex(0)
+    setDisplayUi(true)
+  }
+
   // Change the current scene and reset UI state
   const changeScene = (sceneIndex) => {
-    setSceneIndex(sceneIndex)
     resetUiState()
+    setSceneIndex(sceneIndex)
+    initScene(sceneIndex)
   }
+
+  useEffect(() => {
+    console.log(sceneIndex)
+  }, [sceneIndex, spot])
 
   // Change the current spot and reset UI state
   const goToSpot = (spotIndex) => {
@@ -43,6 +63,7 @@ export default function ExperienceCanvas() {
 
   return (
     <section className="ExperienceCanvas">
+      {sceneIndex}
       <div className="buttons">
         <h2>CHOISIR UNE SCÈNE:&nbsp;</h2>
         <button onClick={() => changeScene(0)}>Cercles mégalithiques</button>
