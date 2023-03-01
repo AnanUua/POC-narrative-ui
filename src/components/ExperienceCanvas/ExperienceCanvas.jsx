@@ -40,11 +40,14 @@ export const ExperienceCanvas = () => {
   }
 
   const getTextEmitter = () =>
-    !isVoiceOver ? scriptData[sceneIndex].spots[spotIndex].emitter : 'narrator'
+    !isVoiceOver
+      ? scriptData[sceneIndex].spots[spotIndex].voiceoverspot[textIndex].emitter
+      : 'narrator'
 
   const hasMore = () => (isVoiceOver ? hasMoreIntroText() : hasMoreSpotText())
 
-  const getIntroText = () => scriptData[sceneIndex].voiceover && scriptData[sceneIndex].voiceover[textIndex].text
+  const getIntroText = () =>
+    scriptData[sceneIndex].voiceover && scriptData[sceneIndex].voiceover[textIndex].text
   const hasMoreIntroText = () => scriptData[sceneIndex].voiceover.length > textIndex + 1
 
   const getSpotText = () => scriptData[sceneIndex].spots[spotIndex].voiceoverspot[textIndex].text
