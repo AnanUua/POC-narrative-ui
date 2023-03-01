@@ -15,7 +15,7 @@
       {
         "index": 0,
         "label": "Cercles de pierre",
-        "voiceover": [
+        "voiceoverspot": [
           {
             "text": "Une colonie de mégalithes a choisi de s’établir ici, sur un site grand de plusieurs hectares. Des centaines de piliers de latérite taillée forment des cercles et se regardent les uns les autres. Ils attendant probablement la fin du monde.",
             "emitter": "narrator"
@@ -40,7 +40,7 @@
       {
         "index": 0,
         "label": "Outils laissés à l’abandon",
-        "voiceover": [
+        "voiceoverspot": [
           {
             "text": "Quelques outils jonchent le sol aride et poussiéreux, le long du chemin menant à la mine. À les détailler, ils n’ont pas été utilisés depuis plusieurs années. La vacuité de ces lieux, autrefois actifs, évoque désormais quelque chose d’à la fois triste et apaisant.",
             "emitter": "narrator"
@@ -50,7 +50,7 @@
       {
         "index": 1,
         "label": "Entrée de la mine",
-        "voiceover": [
+        "voiceoverspot": [
           {
             "text": "Tu es accueilli par les restes d’un triste portail rouillé que le vent fait cliqueter par cycles, et sur lequel tu réussis à lire “GAÏA MINING COMPANY”. Les murs, criblés de fissures et de crevasses, ont été taillés à même la colline. La pourriture est en train de lentement étioler le bois des poutres qui soutiennent les tunnels. Des morceaux de rails témoignent des innombrables allées et venues des mineurs.",
             "emitter": "narrator"
@@ -79,7 +79,7 @@
       {
         "index": 0,
         "label": "...",
-        "voiceover": [
+        "voiceoverspot": [
           {
             "text": "...",
             "emitter": "narrator"
@@ -89,7 +89,7 @@
       {
         "index": 1,
         "label": "...",
-        "voiceover": [
+        "voiceoverspot": [
           {
             "text": "...",
             "emitter": "narrator"
