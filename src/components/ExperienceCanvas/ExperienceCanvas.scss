@@ -1,10 +1,16 @@
 .ExperienceCanvas {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+  padding: 0 20px;
+
   #webgl {
     width: 10rem;
     height: 10rem;
     border: 0.1rem solid white;
     position: relative;
     margin-top: 2rem;
+    display: none;
   }
 
   button {
@@ -37,5 +43,9 @@
         color: rgb(185, 88, 255);
       }
     }
+  }
+
+  .options {
+    margin-top: 2rem;
   }
 }

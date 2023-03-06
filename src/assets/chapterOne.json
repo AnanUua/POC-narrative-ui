@@ -1,5 +1,15 @@
 [
   {
+    "name": "Entrée de la région",
+    "voiceover": [
+      {
+        "text": "Le soleil trône au-dessus de toi, dans un ciel bleu moucheté de résidus opalins. Loin à l’ouest, tu détailles une mine surplombée d’un large panneau rouillant cliquetant au gré du vent. À l’est, des centaines de pierre se réunissent pour former des cercles. Au sud-ouest, les contours brouillés d’un village se dessinent dans l’air brûlant du désert.",
+        "emitter": "narrator"
+      }
+    ],
+    "spots": []
+  },
+  {
     "name": "Cercles mégalithiques",
     "voiceover": [
       {
@@ -15,13 +25,13 @@
       {
         "index": 0,
         "label": "Cercles de pierre",
-        "voiceoverspot": [
+        "spotVoiceover": [
           {
-            "text": "Une colonie de mégalithes a choisi de s’établir ici, sur un site grand de plusieurs hectares. Des centaines de piliers de latérite taillée forment des cercles et se regardent les uns les autres. Ils attendant probablement la fin du monde.",
+            "text": "Une colonie de mégalithes a choisi de s’établir ici, sur un site grand de plusieurs hectares. Des centaines de piliers de latérite taillée forment des cercles et se regardent les uns les autres. Ils attendent peut-être la fin du monde.",
             "emitter": "narrator"
           },
           {
-            "text": "Ces pierres n’ont rien de réjouissant : elles surmontent des sépultures. Laisse-moi reformuler : tu te trouves dans un cimetière, et sous tes pieds reposent des centaines — peut-être même des *milliers* — d’habitants du Nyalandée. Ils ne sont plus là, aujourd’hui.",
+            "text": "Ces pierres surmontent des sépultures. Laisse-moi reformuler : tu te trouves dans un cimetière, et sous tes pieds reposent des centaines — peut-être même des *milliers* — d’habitants du Nyalaandée. Leur corps n’est  peut-être plus, mais leur âme est toujours ici.",
             "emitter": "innerVoice"
           }
         ]
@@ -39,60 +49,74 @@
     "spots": [
       {
         "index": 0,
-        "label": "Outils laissés à l’abandon",
-        "voiceoverspot": [
+        "label": "Entrée de la mine",
+        "spotVoiceover": [
           {
-            "text": "Quelques outils jonchent le sol aride et poussiéreux, le long du chemin menant à la mine. À les détailler, ils n’ont pas été utilisés depuis plusieurs années. La vacuité de ces lieux, autrefois actifs, évoque désormais quelque chose d’à la fois triste et apaisant.",
+            "text": "Tu es accueilli(e) par les restes d’un portail rouillé que le vent fait cliqueter par cycles, et sur lequel tu réussis à lire “Gaïa Minerals Group”. La rouille est en train d’oxyder les barreaux des échafaudages.",
             "emitter": "narrator"
+          },
+          {
+            "text": "Tu sens le vent s’engouffrer à l’intérieur.",
+            "emitter": "innerVoice"
           }
         ]
       },
       {
         "index": 1,
-        "label": "Entrée de la mine",
-        "voiceoverspot": [
+        "label": "Excavatrice abandonnée",
+        "spotVoiceover": [
           {
-            "text": "Tu es accueilli par les restes d’un triste portail rouillé que le vent fait cliqueter par cycles, et sur lequel tu réussis à lire “GAÏA MINING COMPANY”. Les murs, criblés de fissures et de crevasses, ont été taillés à même la colline. La pourriture est en train de lentement étioler le bois des poutres qui soutiennent les tunnels. Des morceaux de rails témoignent des innombrables allées et venues des mineurs.",
+            "text": "Un engin colossal monté sur une paire de chenilles envahit la mine à ciel ouvert. C’est une excavatrice géante à godets. Elle n’a pas été utilisée depuis de *nombreuses* années.",
             "emitter": "narrator"
           },
           {
-            "text": "Tu sens le vent s’engouffrer à l’intérieur.",
-            "emitter": "narrator"
+            "text": "Tu te sens tout(e) petit(e) à côté de cette machine.",
+            "emitter": "innerVoice"
           }
         ]
       }
     ]
   },
   {
-    "name": "Point de vue",
+    "name": "Keur Gnìalo",
     "voiceover": [
       {
-        "text": "Le soleil trône au-dessus de toi, dans un ciel bleu moucheté de résidus opalins. Loin à l’ouest, tu détailles une mine surplombée d’un large panneau rouillant cliquetant au gré du vent. À l’est, des centaines de pierre se réunissent pour former des cercles. Au sud-ouest, les contours brouillés d’un village se dessinent dans l’air brûlant du désert.",
+        "text": "Une vingtaine de cases se dresse face à vous, vite accompagnée par des paires de yeux curieux et observateurs qui te guettent en silence, de loin, pendant que des jeunes filles rentrent de l’école.",
         "emitter": "narrator"
-      },
-      {
-        "text": "Keur Gnìalo n’attend plus que toi. Appuie sur l’accélérateur. Démarre *maintenant*, sans plus tarder.",
-        "emitter": "innerVoice"
       }
     ],
     "spots": [
       {
         "index": 0,
-        "label": "...",
-        "voiceoverspot": [
+        "label": "Cheffe de la localité",
+        "spotVoiceover": [
           {
-            "text": "...",
-            "emitter": "narrator"
-          }
-        ]
-      },
-      {
-        "index": 1,
-        "label": "...",
-        "voiceoverspot": [
+            "text": "Encore une voiture.",
+            "options": [
+              {
+                "text": "Bonjour.",
+                "response": "Oui, oui, bonjour."
+              },
+              {
+                "text": "“Encore une voiture” ?",
+                "response": "Quelqu’un est passé ici, juste avant vous. Vous êtes là pour Anan Uua, vous aussi."
+              }
+            ],
+            "emitter": "npc"
+          },
           {
-            "text": "...",
-            "emitter": "narrator"
+            "text": "Je préfère vous prévenir : l’arbre à palabres va revenir. Il finit toujours par revenir.",
+            "options": [
+              {
+                "text": "Je ne suis pas sûr(e) de saisir…",
+                "response": "Le baobab. Il vous attend au bout de la savane."
+              },
+              {
+                "text": "Et qu’est-ce que je dois faire, maintenant ?",
+                "response": "Mettez la main sur un autre de nos *adinkras*. Il ne doit pas être bien loin. Furetez dans les parages."
+              }
+            ],
+            "emitter": "npc"
           }
         ]
       }
