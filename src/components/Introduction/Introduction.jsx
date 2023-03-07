@@ -61,7 +61,7 @@ export default function Introduction() {
             className="Introduction__nextButton"
             onClick={() => hideFollowingText(section.options[followingToShow]?.version)}
           >
-            (Suite)
+            Suite...
           </button>
         </p>
       )

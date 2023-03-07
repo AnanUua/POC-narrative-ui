@@ -84,29 +84,25 @@ export const ExperienceCanvas = () => {
 
   return (
     <section className="ExperienceCanvas">
-      <div className="buttons">
-        <h2>CHOISIR UNE SCÈNE:&nbsp;</h2>
-        {scriptData.map((scene, index) => (
-          <button key={index} onClick={() => changeScene(index)}>
-            {scene.name}
-          </button>
-        ))}
+      <div className="meta">
+        <div className="buttons">
+          {scriptData.map((scene, index) => (
+            <button key={index} onClick={() => changeScene(index)}>
+              {scene.name}
+            </button>
+          ))}
+        </div>
+        <hr />
+        <div className="spots">
+          {scriptData[sceneIndex].spots.map((spot, index) => (
+            <button key={index} className="spot" onClick={() => goToSpot(spot.index)}>
+              {spot.label}
+            </button>
+          ))}
+        </div>
       </div>
-      <hr />
-      <div>
-        <h2>CHOISIR UN SPOT:&nbsp;</h2>
-        {scriptData[sceneIndex].spots.map((spot, index) => (
-          <button key={index} className="spot" onClick={() => goToSpot(spot.index)}>
-            {spot.label}
-          </button>
-        ))}
-      </div>
-      <canvas id="webgl"></canvas>
       {displayUi && (
         <div className="dialogue">
-          <span>SHOW OPTIONS? </span>
-          {displayOptions.toString()}
-          <p>//////</p>
           <div className="emitter">
             {getTextEmitter() === 'narrator' && <h2 className="narrator">Le narrateur</h2>}
             {getTextEmitter() === 'innerVoice' && (
@@ -118,25 +114,23 @@ export const ExperienceCanvas = () => {
           <div className="content">
             {isVoiceOver && <p>{getIntroText()}</p>}
             {!isVoiceOver && displayOptions && <p>{getSpotText()}</p>}
-            {hasOptions() && !isVoiceOver && !displayOptions && (
-              <p style={{ color: 'red' }}>{getOptionResponse()}</p>
-            )}
+            {hasOptions() && !isVoiceOver && !displayOptions && <p>{getOptionResponse()}</p>}
 
             {hasOptions() && hasMore() && !displayOptions && (
               <button className="more" onClick={showMoreNPC}>
-                Suite
+                Suite...
               </button>
             )}
 
             {!hasOptions() && hasMore() && (
               <button className="more" onClick={showMore}>
-                Suite
+                Suite...
               </button>
             )}
 
             {!hasMore() && (
               <button className="more" onClick={() => setDisplayUi(false)}>
-                Fermer
+                Fermer.
               </button>
             )}
 

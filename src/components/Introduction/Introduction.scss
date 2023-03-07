@@ -1,4 +1,9 @@
 .Introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   &__date {
     color: grey;
   }
@@ -17,19 +22,19 @@
   }
 
   &__option {
-    color: orange;
+    color: rgb(255, 178, 77);
     display: inline-block;
     cursor: pointer;
     margin-right: 2rem;
 
     &:hover {
-      color: rgb(213, 139, 0);
+      color: rgb(255, 157, 29);
     }
   }
 
   &__nextButton {
     display: block;
-    text-decoration: underline;
+    color: grey;
     margin-top: 2rem;
     cursor: pointer;
 
