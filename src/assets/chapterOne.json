@@ -90,58 +90,5 @@
       }
     ],
     "spots": []
-  },
-  {
-    "name": "Keur Gnìalo",
-    "voiceover": [
-      {
-        "text": "Une vingtaine de cases se dresse face à vous, vite accompagnée par des paires de yeux curieux et observateurs qui te guettent en silence, de loin, pendant que des jeunes filles rentrent de l’école.",
-        "emitter": "narrator"
-      }
-    ],
-    "spots": [
-      {
-        "index": 0,
-        "label": "Cheffe de la localité",
-        "spotVoiceover": [
-          {
-            "text": "Une femme vous fait face.",
-            "emitter": "narrator"
-          },
-          {
-            "text": "Encore une voiture.",
-            "options": [
-              {
-                "text": "Bonjour.",
-                "response": "Oui, oui, bonjour."
-              },
-              {
-                "text": "“Encore une voiture” ?",
-                "response": "Quelqu’un est passé ici, juste avant vous. Vous êtes là pour Anan Uua, vous aussi."
-              }
-            ],
-            "emitter": "npc"
-          },
-          {
-            "text": "Je préfère vous prévenir : l’arbre à palabres va revenir. Il finit toujours par revenir.",
-            "options": [
-              {
-                "text": "Je ne suis pas sûr(e) de saisir…",
-                "response": "Le baobab. Il vous attend au bout de la savane."
-              },
-              {
-                "text": "Et qu’est-ce que je dois faire, maintenant ?",
-                "response": "Mettez la main sur un autre de nos *adinkras*. Il ne doit pas être bien loin. Furetez dans les parages."
-              }
-            ],
-            "emitter": "npc"
-          },
-          {
-            "text": "Anan Uua éclaire votre route.",
-            "emitter": "npc"
-          }
-        ]
-      }
-    ]
   }
 ]

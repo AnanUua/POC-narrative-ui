@@ -1,9 +1,8 @@
 import './ExperienceCanvas.scss'
-import chapterOneData from '../../assets/chapterOne.json'
+import scriptData from '../../assets/chapterOne.json'
 import { useEffect, useState } from 'react'
 
 export const ExperienceCanvas = () => {
-  const scriptData = chapterOneData
 
   // Local state
   const [displayUi, setDisplayUi] = useState(false)
@@ -21,6 +20,12 @@ export const ExperienceCanvas = () => {
     }
   }, [sceneIndex])
 
+  useEffect(() => {
+    // add class active to the first button of buttons and spots
+    const buttons = document.querySelectorAll('.buttons button')
+    buttons[0].classList.add('active')
+  }, [])
+
   // Change the current scene and reset UI state
   const changeScene = (event, data) => {
     setSceneIndex(data)
@@ -33,6 +38,13 @@ export const ExperienceCanvas = () => {
 
     const buttons = document.querySelectorAll('.buttons button')
     buttons.forEach((button) => {
+      if (button !== event.target) {
+        button.classList.remove('active')
+      }
+    })
+
+    const spotButtons = document.querySelectorAll('.spots button')
+    spotButtons.forEach((button) => {
       if (button !== event.target) {
         button.classList.remove('active')
       }
