@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 export const ExperienceCanvas = () => {
   const scriptData = chapterOneData
+
   // Local state
   const [displayUi, setDisplayUi] = useState(false)
   const [sceneIndex, setSceneIndex] = useState(0)
@@ -22,11 +23,11 @@ export const ExperienceCanvas = () => {
 
   // Change the current scene and reset UI state
   const changeScene = (data) => {
+    setSceneIndex(data)
     setSpotIndex(0)
     setTextIndex(0)
     setDisplayUi(false)
     setDisplayOptions(false)
-    setSceneIndex(data)
   }
 
   // Change the current spot and reset UI state
@@ -40,8 +41,12 @@ export const ExperienceCanvas = () => {
 
   // Show the next text in the voiceover array
   const showMore = () => {
-    setDisplayOptions(true)
     setTextIndex(textIndex + 1)
+  }
+
+  const showMoreNPC = () => {
+    setTextIndex(textIndex + 1)
+    setDisplayOptions(true)
   }
 
   const getTextEmitter = () =>
@@ -99,6 +104,9 @@ export const ExperienceCanvas = () => {
       <canvas id="webgl"></canvas>
       {displayUi && (
         <div className="dialogue">
+          <span>SHOW OPTIONS? </span>
+          {displayOptions.toString()}
+          <p>//////</p>
           <div className="emitter">
             {getTextEmitter() === 'narrator' && <h2 className="narrator">Le narrateur</h2>}
             {getTextEmitter() === 'innerVoice' && (
@@ -113,16 +121,25 @@ export const ExperienceCanvas = () => {
             {hasOptions() && !isVoiceOver && !displayOptions && (
               <p style={{ color: 'red' }}>{getOptionResponse()}</p>
             )}
-            {hasMore() && !displayOptions && (
+
+            {hasOptions() && hasMore() && !displayOptions && (
+              <button className="more" onClick={showMoreNPC}>
+                Suite
+              </button>
+            )}
+
+            {!hasOptions() && hasMore() && (
               <button className="more" onClick={showMore}>
                 Suite
               </button>
             )}
-            {!hasMore() && !displayOptions && (
+
+            {!hasMore() && (
               <button className="more" onClick={() => setDisplayUi(false)}>
                 Fermer
               </button>
             )}
+
             {hasOptions() && displayOptions && (
               <div className="options">
                 {scriptData[sceneIndex].spots[spotIndex].spotVoiceover[textIndex].options.map(

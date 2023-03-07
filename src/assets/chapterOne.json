@@ -117,6 +117,10 @@
               }
             ],
             "emitter": "npc"
+          },
+          {
+            "text": "Anan Uua éclaire votre route.",
+            "emitter": "npc"
           }
         ]
       }
