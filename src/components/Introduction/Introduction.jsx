@@ -63,6 +63,10 @@ export default function Introduction() {
   const showFollowingText = (index) => {
     setFollowingToShow(index)
     setShowFollowing(true)
+
+    // Play audio when user selects an option
+    
+
   }
 
   // Hide the following text for a prompt, update local state, and record user's answer

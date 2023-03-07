@@ -1,13 +1,18 @@
 .StartButton {
-  background-color: orange;
-  color: black;
-  font-weight: 400;
-  padding: 2rem;
+  display: block;
+  margin: 0 auto;
   margin-top: 2rem;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  background-color: rgb(255, 178, 77);
+  cursor: pointer;
+  font-weight: 400;
   text-align: center;
+  text-decoration: none;
+  color: black;
 
   &:hover {
     background-color: rgb(213, 139, 0);
-    cursor: pointer;
   }
 }
