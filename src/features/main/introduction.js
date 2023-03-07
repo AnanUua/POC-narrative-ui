@@ -23,9 +23,9 @@ export const introduction = createSlice({
       state.isPromptComplete = true
 
       if (state.score <= TIPPING_POINT) {
-        state.scenario = '°1'
+        state.scenario = '1'
       } else {
-        state.scenario = '°2'
+        state.scenario = '2'
       }
     },
     startExperience: (state) => {

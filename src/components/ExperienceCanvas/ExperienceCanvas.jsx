@@ -1,5 +1,5 @@
 import './ExperienceCanvas.scss'
-import scriptData from '../../assets/chapterOne.json'
+import scriptData from '../../assets/chapterTwo.json'
 import { useEffect, useState } from 'react'
 
 export const ExperienceCanvas = () => {

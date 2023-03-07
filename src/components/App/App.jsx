@@ -12,6 +12,7 @@ export default function App() {
   return (
     <div className="App">
       <Introduction />
+      {/* {!hasExperienceStarted && <SkipIntroButton />} */}
       {hasExperienceStarted && <ExperienceCanvas />}
       <StoreData />
     </div>
