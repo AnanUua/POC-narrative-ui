@@ -48,10 +48,13 @@
     .narrator {
       text-transform: uppercase;
       font-weight: 400;
-      color: rgb(255, 178, 77);
 
       &--innerVoice {
         color: rgb(185, 88, 255);
+      }
+
+      &--npc {
+        color: rgb(255, 178, 77);
       }
     }
   }

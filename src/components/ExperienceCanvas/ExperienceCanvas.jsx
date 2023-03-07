@@ -108,7 +108,9 @@ export const ExperienceCanvas = () => {
             {getTextEmitter() === 'innerVoice' && (
               <h2 className="narrator narrator--innerVoice">Une voix</h2>
             )}
-            {getTextEmitter() === 'npc' && <h2 className="narrator">{getTextLabel()}</h2>}
+            {getTextEmitter() === 'npc' && (
+              <h2 className="narrator narrator--npc">{getTextLabel()}</h2>
+            )}
           </div>
 
           <div className="content">

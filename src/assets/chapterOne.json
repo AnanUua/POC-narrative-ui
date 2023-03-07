@@ -78,6 +78,20 @@
     ]
   },
   {
+    "name": "Route vers la savane",
+    "voiceover": [
+      {
+        "text": "Un baobab singulier et trapu apparaît, dépliant ses couronnes vertes en-dessous du ciel. Perchées sur une branche, deux perruches aux couleurs vives te dévisagent placidement.",
+        "emitter": "narrator"
+      },
+      {
+        "text": "L’arbre à palabres. Une invitation à prendre connaissance d’un passé qui n’est pas le tien. Qui est celui ou celle qui est venu(e) avant toi ?",
+        "emitter": "innerVoice"
+      }
+    ],
+    "spots": []
+  },
+  {
     "name": "Keur Gnìalo",
     "voiceover": [
       {
@@ -90,6 +104,10 @@
         "index": 0,
         "label": "Cheffe de la localité",
         "spotVoiceover": [
+          {
+            "text": "Une femme vous fait face.",
+            "emitter": "narrator"
+          },
           {
             "text": "Encore une voiture.",
             "options": [
