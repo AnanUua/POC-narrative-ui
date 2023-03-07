@@ -22,21 +22,39 @@ export const ExperienceCanvas = () => {
   }, [sceneIndex])
 
   // Change the current scene and reset UI state
-  const changeScene = (data) => {
+  const changeScene = (event, data) => {
     setSceneIndex(data)
     setSpotIndex(0)
     setTextIndex(0)
     setDisplayUi(false)
     setDisplayOptions(false)
+
+    event.target.classList.add('active')
+
+    const buttons = document.querySelectorAll('.buttons button')
+    buttons.forEach((button) => {
+      if (button !== event.target) {
+        button.classList.remove('active')
+      }
+    })
   }
 
   // Change the current spot and reset UI state
-  const goToSpot = (data) => {
+  const goToSpot = (event, data) => {
     setSpotIndex(data)
     setTextIndex(0)
     setIsVoiceOver(false)
     setDisplayUi(true)
     setDisplayOptions(true)
+
+    event.target.classList.add('active')
+
+    const buttons = document.querySelectorAll('.spots button')
+    buttons.forEach((button) => {
+      if (button !== event.target) {
+        button.classList.remove('active')
+      }
+    })
   }
 
   // Show the next text in the voiceover array
@@ -87,7 +105,7 @@ export const ExperienceCanvas = () => {
       <div className="meta">
         <div className="buttons">
           {scriptData.map((scene, index) => (
-            <button key={index} onClick={() => changeScene(index)}>
+            <button key={index} onClick={(event) => changeScene(event, index)}>
               {scene.name}
             </button>
           ))}
@@ -95,7 +113,7 @@ export const ExperienceCanvas = () => {
         <hr />
         <div className="spots">
           {scriptData[sceneIndex].spots.map((spot, index) => (
-            <button key={index} className="spot" onClick={() => goToSpot(spot.index)}>
+            <button key={index} className="spot" onClick={() => goToSpot(event, spot.index)}>
               {spot.label}
             </button>
           ))}

@@ -12,7 +12,7 @@ export default function StartButton() {
   // Template
   return (
     <button className="StartButton" onClick={() => endIntroduction()}>
-      Start the experience
+      Démarrer le road trip
     </button>
   )
 }

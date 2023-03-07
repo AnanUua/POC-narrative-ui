@@ -3,15 +3,22 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
+    width: 50%;
 
     .buttons,
     .spots {
       button {
-        color: rgb(164, 164, 164);
-        border: 0.1rem solid rgb(164, 164, 164);
+        color: white;
+        border: 0.1rem solid white;
         padding: 1rem 2rem;
         margin-right: 2rem;
-        font-weight: 400;
+        margin-bottom: 2rem;
+
+        &.active {
+          background-color: white;
+          pointer-events: none;
+          color: black;
+        }
       }
     }
   }
@@ -26,9 +33,9 @@
   }
 
   hr {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     height: 0.1rem;
-    background-color: grey;
+    background-color: white;
   }
 
   h2 {

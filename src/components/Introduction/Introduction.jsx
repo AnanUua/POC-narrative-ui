@@ -80,9 +80,9 @@ export default function Introduction() {
   // Render the start button and completion message
   const renderCompletion = () => {
     return (
-      <footer>
+      <footer className="Introduction__footer">
         <p style={{ marginTop: '2rem' }}>
-          Vous êtes prêt(e) à partir. Motivation de départ: {scenario}.
+          [Début de l'expérience. Variante de scénario N°{scenario}].
         </p>
         <StartButton />
       </footer>

@@ -1,8 +1,10 @@
 .StartButton {
   background-color: orange;
   color: black;
+  font-weight: 400;
   padding: 2rem;
   margin-top: 2rem;
+  text-align: center;
 
   &:hover {
     background-color: rgb(213, 139, 0);
