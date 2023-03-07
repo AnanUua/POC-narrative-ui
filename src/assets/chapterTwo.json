@@ -51,5 +51,97 @@
         ]
       }
     ]
+  },
+  {
+    "name": "Pont cassé",
+    "voiceover": [
+      {
+        "text": "Un pont a été construit pour enjamber le bras d’une large rivière qui se déverse quelques kilomètres plus loin, à l’est, dans un immense lac rose bordant la région.",
+        "emitter": "narrator"
+      },
+      {
+        "text": "Le pont est complètement détruit, aujourd’hui.",
+        "emitter": "narrator"
+      }
+    ],
+    "spots": [
+      {
+        "index": 0,
+        "label": "Débris du pont",
+        "spotVoiceover": [
+          {
+            "text": "Les ponts finissent indubitablement par céder. Que ce soit la faute des femmes et des hommes, ou bien simplement les affres du temps, cela n’a aucune importance aujourd’hui. Tu ne peux pas traverser.",
+            "emitter": "innerVoice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Memsen",
+    "voiceover": [
+      {
+        "text": "Un petit village de fortune s’élève sur des pilotis plantés dans le lac. Des planches en bois servent de passerelles pour naviguer entre les baraquements recouverts de bâches colorées. Au plus loin que tes yeux peuvent voir : une côte constellée de ramées et de canisse.",
+        "emitter": "narrator"
+      }
+    ],
+    "spots": [
+      {
+        "index": 0,
+        "label": "Lac rose",
+        "spotVoiceover": [
+          {
+            "text": "Bizuté par un lourd soleil qui se réfléchit sur un immense lac ocre, tu sens des relents de sulfure d’hydrogène pénétrer tes narines. Autour du lac, des femmes et des hommes rient, font des tours dans l’eau, et sifflotent le même air enjoué. Sur ta carte, cet endroit avait pourtant l’air d’être le bout du monde.",
+            "emitter": "narrator"
+          },
+          {
+            "text": "Même au bout du monde, il y a des femmes et des hommes qui sifflent en chœur.",
+            "emitter": "innerVoice"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "label": "Groupe de pêcheurs",
+        "spotVoiceover": [
+          {
+            "text": "Des pêcheurs font des tours dans l'eau du lac.",
+            "emitter": "narrator"
+          },
+          {
+            "text": "Trop joué près du feu, maintenant j'ai les cils auburn.",
+            "options": [
+              {
+                "text": "Je voulais juste m'amuser comme...",
+                "response": "Cindy Lauper."
+              },
+              {
+                "text": "Euh, je n'ai pas les paroles.",
+                "response": "Dommage."
+              }
+            ],
+            "emitter": "npc"
+          },
+          {
+            "text": "Bonne pêche.",
+            "emitter": "npc"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Route vers le plateau",
+    "voiceover": [
+      {
+        "text": "Un autre baobab se dresse le long de ta route. Tu as l’impression de revoir celui de ce matin, en un peu plus grand.",
+        "emitter": "narrator"
+      },
+      {
+        "text": "C’est le *même* baobab. Cette fois, il te faut connaître la vérité pour pouvoir continuer à rouler.",
+        "emitter": "innerVoice"
+      }
+    ],
+    "spots": []
   }
 ]

@@ -3,7 +3,6 @@ import scriptData from '../../assets/chapterOne.json'
 import { useEffect, useState } from 'react'
 
 export const ExperienceCanvas = () => {
-
   // Local state
   const [displayUi, setDisplayUi] = useState(false)
   const [sceneIndex, setSceneIndex] = useState(0)

@@ -11,16 +11,7 @@
   },
   {
     "name": "Cercles mégalithiques",
-    "voiceover": [
-      {
-        "text": "Texte d'introduction des cercles mégalithiques",
-        "emitter": "narrator"
-      },
-      {
-        "text": "Suite du texte d'introduction des cercles mégalithiques",
-        "emitter": "narrator"
-      }
-    ],
+    "voiceover": [],
     "spots": [
       {
         "index": 0,
@@ -40,12 +31,7 @@
   },
   {
     "name": "Ancienne mine de phosphate",
-    "voiceover": [
-      {
-        "text": "Texte d'introduction de l'ancienne mine de phosphate",
-        "emitter": "narrator"
-      }
-    ],
+    "voiceover": [],
     "spots": [
       {
         "index": 0,
